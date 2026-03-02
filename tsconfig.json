@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2024",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "lib": ["es2023", "dom"]
+  },
+  "exclude": [
+    "tests",
+    "dist",
+    "node_modules"
+  ]
+}
