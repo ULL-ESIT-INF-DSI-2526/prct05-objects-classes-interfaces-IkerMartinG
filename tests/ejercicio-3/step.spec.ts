@@ -8,6 +8,15 @@ describe("Step", () => {
   });
 
   test("throws on invalid duration", () => {
-    expect(() => new Step("Cortar", 0, [], false, 0)).toThrow();
+    expect(() => new Step("Cortar", 0, ["prep"], false, 0)).toThrow();
+  });
+
+  test("throws on empty name", () => {
+    expect(() => new Step("", 60, ["prep"], false, 0)).toThrow();
+  });
+
+  test("throws on invalid tags", () => {
+    // @ts-ignore
+    expect(() => new Step("Cortar", 60, null, false, 0)).toThrow();
   });
 });

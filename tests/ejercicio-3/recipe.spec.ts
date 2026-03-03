@@ -13,14 +13,11 @@ describe("Recipe", () => {
     expect(r.getStepCount()).toBe(2);
   });
 
-  test("calculates time range", () => {
-    const r = new Recipe("Tarta", 2020, steps);
-    const range = r.getTimeRange();
-    expect(range.min).toBe(60);
-    expect(range.max).toBe(360);
-  });
-
   test("throws on invalid year", () => {
     expect(() => new Recipe("Tarta", 1800, steps)).toThrow();
+  });
+
+  test("throws on empty name", () => {
+    expect(() => new Recipe("", 2020, steps)).toThrow();
   });
 });

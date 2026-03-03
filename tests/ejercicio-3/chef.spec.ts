@@ -16,4 +16,8 @@ describe("Chef", () => {
   test("throws on negative followers", () => {
     expect(() => new Chef("Iker", -1, [recipe])).toThrow();
   });
+
+  test("throws on empty name", () => {
+    expect(() => new Chef("", 100, [recipe])).toThrow();
+  });
 });
