@@ -14,8 +14,8 @@ export class Board {
 
   /**
    * Attempts to drop a piece into a column.
-   * @param col Column index (0–6).
-   * @param piece Player piece ("X" or "O").
+   * @param col - Column index (0–6).
+   * @param piece - Player piece ("X" or "O").
    * @returns true if successful, false if column is full.
    */
   public dropPiece(col: number, piece: string): boolean {

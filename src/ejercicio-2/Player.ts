@@ -6,8 +6,8 @@ import { IPlayer } from "./IPlayer";
 export class Player implements IPlayer {
   /**
    * Creates a new player.
-   * @param name Player name.
-   * @param piece Piece symbol ("X" or "O").
+   * @param name - Player name.
+   * @param piece - Piece symbol ("X" or "O").
    */
   constructor(
     public readonly name: string,

@@ -16,7 +16,7 @@ describe("Step", () => {
   });
 
   test("throws on invalid tags", () => {
-    // @ts-ignore
+    // @ts-expect-error invalid tags
     expect(() => new Step("Cortar", 60, null, false, 0)).toThrow();
   });
 });
